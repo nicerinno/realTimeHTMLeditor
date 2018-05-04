@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Real Time Editor</title>
+	<link rel="stylesheet" href="css/style.css">
+	
+	
+	<script>
+		function refresh() 
+		{
+			var textContent = document.getElementById('editor-textarea').value;
+			document.getElementById('viewer').srcdoc = textContent;
+		}
+		
+		function textColorRed()
+		{
+			var textContent = document.getElementById('editor-textarea');
+			textContent.style.color="red";
+		}
+		function textColorWhite()
+		{
+			var textContent = document.getElementById('editor-textarea');
+			textContent.style.color="white";
+		}
+		function textColorOrange()
+		{
+			var textContent = document.getElementById('editor-textarea');
+			textContent.style.color="orange";
+		}
+		function userColorChange()
+		{
+			var textContent = document.getElementById('editor-textarea');
+			var colorValue = document.getElementById('colorValue').value;
+			textContent.style.color=colorValue;
+		}
+		function resetColor()
+		{
+			var textContent = document.getElementById('editor-textarea');
+			textContent.style.color="#f4df24";
+		}
+		
+		function textSize18()
+		{
+			var textContent = document.getElementById('editor-textarea');
+			textContent.style.fontSize="18px";
+		}
+		
+		function textSize24()
+		{
+			var textContent = document.getElementById('editor-textarea');
+			textContent.style.fontSize="24px";
+		}
+		
+		function textSizeReset()
+		{
+			var textContent = document.getElementById('editor-textarea');
+			textContent.style.fontSize="16px";
+		}
+	</script>
+	
+</head>
+<body>
+<div class="dropdown" style="float:left">
+  <button class="dropbtn">Change text color</button>
+  <div class="dropdown-content">
+    <a onClick="textColorRed()">Red</a>
+    <a onClick="textColorWhite()">White</a>
+    <a onClick="textColorOrange()">Orange</a>
+	<a>Choose your own color:<input id="colorValue" type="text" name="colorPicker"><input type="button" value="Change!" onClick="userColorChange()"></a>
+	<a onClick="resetColor()">Reset</a>
+  </div>
+</div>
+
+<div class="dropdown">
+  <button class="dropbtn" >Change text size</button>
+  <div class="dropdown-content">
+    <a onClick="textSize18()">18px</a>
+    <a onClick="textSize24()">24px</a>
+    <a onClick="textSizeReset()">Reset</a>
+  </div>
+</div>
+  
+
+	<div class="main">
+		<textarea id="editor-textarea" onkeyup ="refresh();" placeholder="Code here"></textarea>
+		<iframe id="viewer"></iframe>
+	</div>
+</body>
+</html>
