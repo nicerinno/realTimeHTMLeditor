@@ -1,2 +1,37 @@
-# realTimeHTMLeditor
-As a coding student, and therefore HTML student, when I'm trying new stuff it's very unpratical to always go back and forwoard to see what I've done. So I wondered "what if I could code and watch in real time what happens?". I searched and I found scratchpad, but I wanted something I could use offline. Did some research and coded this. Hope you guys like it
+## Welcome to GitHub Pages
+
+You can use the [editor on GitHub](https://github.com/nicerinno/realTimeHTMLeditor/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+
+Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+
+### Markdown
+
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+
+```markdown
+Syntax highlighted code block
+
+# Header 1
+## Header 2
+### Header 3
+
+- Bulleted
+- List
+
+1. Numbered
+2. List
+
+**Bold** and _Italic_ and `Code` text
+
+[Link](url) and ![Image](src)
+```
+
+For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+
+### Jekyll Themes
+
+Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/nicerinno/realTimeHTMLeditor/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+
+### Support or Contact
+
+Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
