@@ -7,7 +7,6 @@ nav
 	background-color: #680411;
 	padding: 5px;
 	padding-top:2%;
-	clear:left;
 	overflow:auto;
 	height:5%;
 }
@@ -15,6 +14,11 @@ li
 {
 	display:inline;
 	padding-right:2%;
+}
+
+@media screen and (max-width: 600px){
+	nav.topnav {height:10%;}
+    nav.topnav li {display: block; padding-top: 2%;}
 }
 
 #editor {
