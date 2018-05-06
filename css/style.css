@@ -1,113 +1,56 @@
-html, body, nav
+html,body { margin:0; padding:0; height:100%; width:100%; overflow: hidden; background-color:black;}
+
+nav
 {
-	height:97%;
-	background-color:black;
+	text-align:center;
+	position:relative;
+	background-color: #680411;
+	padding: 5px;
+	padding-top:2%;
+	clear:left;
+	overflow:auto;
+	height:5%;
+}
+li
+{
+	display:inline;
+	padding-right:2%;
 }
 
-.main
-{
-background-color: black;
-height:100%;
-width:100%;
-display: inline-flex;
-}
-
-#editor-textarea
-{
-background-color: #45494f;
-width: 100%;
-height: 94%;
-margin-left: 5px;
-margin-top: 10px;
-margin-right: 5px;
-padding: 5px;
-color: #f4df24;
-border: 1px solid black;
-}
-
-textarea#story 
-{
-
-  -moz-appearance:none;
-  outline:0px none transparent;
-}
-
-textarea:focus, input:focus
-{
-    outline: 0;
-}
-
-*:focus 
-{
-    outline: 0;
-}
-
-#viewer
-{
-background-color: white;
-border: none;
-width: 100%;
-height: 95%;
-margin-left: 5px;
-margin-top: 10px;
-margin-right: 5px;
-border: 1px solid;
-color: white;
-}
-
-
-
-.dropbtn 
-{
+#editor {
+    background-color: #45494f;
+	width: 50%;
+	height: 100%;
 	margin-left: 5px;
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+	margin-top: 10px;
+	margin-right: 5px;
+	padding: 5px;
+	color: #f4df24;
+	border: 1px solid black;
+    display:inline-block;
+}
+
+#container {
+	height:100%;
+	width:auto;
+	white-space : nowrap; 
+	overflow : hidden;
+	position:relative;
+}
+
+#iframe {
+
+	background-color: white;
+	border: none;
+	width: 48%;
+	height: 101%;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-right: 5px;
+	border: 1px solid;
+	color: white;
+	display:inline-block;
 }
 
 
-.dropdown 
-{
-    position: relative;
-    display: inline-block;
-}
-
-
-.dropdown-content 
-{
-	margin-left:5px;
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-
-.dropdown-content a 
-{
-    color: black;
-    padding: 8px 10px;
-    text-decoration: none;
-    display: block;
-}
-
-
-.dropdown-content a:hover 
-{
-	background-color: #919191;
-	color:white;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
+.ace_editor .ace_marker-layer .ace_bracket { display: none }
