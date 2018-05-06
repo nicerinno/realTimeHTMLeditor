@@ -1,19 +1,30 @@
-html,body { margin:0; padding:0; height:100%; width:100%; overflow: hidden; background-color:black;}
+html,body { margin:0; padding:0; height:100%; width:100%; overflow:auto; background-color:black;}
 
-nav
+nav.topnav
 {
 	text-align:center;
 	position:relative;
 	background-color: #680411;
-	padding: 5px;
-	padding-top:2%;
-	overflow:auto;
+	padding: 2% 5px 10px 0px;
+	overflow:hidden;
 	height:5%;
 }
-li
+li.regular
 {
 	display:inline;
 	padding-right:2%;
+}
+
+li.iframeChoosers
+{	
+	display:inline;
+}
+
+nav ul
+{
+	text-align: left;
+	position:absolute;
+	background-color: #680411;
 }
 
 @media screen and (max-width: 600px){
@@ -21,10 +32,10 @@ li
     nav.topnav li {display: block; padding-top: 2%;}
 }
 
-#editor {
+#editor{
     background-color: #45494f;
-	width: 50%;
-	height: 100%;
+	width: 97%;
+	height: 47%;
 	margin-left: 5px;
 	margin-top: 10px;
 	margin-right: 5px;
@@ -34,20 +45,64 @@ li
     display:inline-block;
 }
 
-#container {
-	height:100%;
-	width:auto;
-	white-space : nowrap; 
-	overflow : hidden;
-	position:relative;
+#cssEditor {
+    background-color: #45494f;
+	width: 97%;
+	height: 47%;
+	margin-left: 5px;
+	margin-top: 10px;
+	margin-right: 5px;
+	padding: 5px;
+	color: #f4df24;
+	border: 1px solid black;
+    display:inline-block;
+}
+#scriptEditor {
+    background-color: #45494f;
+	width: 97%;
+	height: 47%;
+	margin-left: 5px;
+	margin-top: 10px;
+	margin-right: 5px;
+	padding: 5px;
+	color: #f4df24;
+	border: 1px solid black;
+
 }
 
-#iframe {
+#container1{
+	float:left;
+	height:97%;
+	width:50%;
+	white-space : nowrap; 
+	overflow : auto;
+	position:absolute;
+}
 
+#container2 {
+	margin-left: 3%;
+	margin-top:0.3%;
+	float:right;
+	height:95%;
+	width:95%;
+	overflow : hidden;
+	position:absolute;
+}
+
+#container3 {
+	margin-top:49.5%;
+	float:right;
+	height:75%;
+	width:100%;
+	position:absolute;
+}
+
+#viewer {
+	float:right;
 	background-color: white;
 	border: none;
-	width: 48%;
-	height: 101%;
+	width: 50%;
+	height: 100%;
 	margin-left: 5px;
 	margin-top: 5px;
 	margin-right: 5px;
