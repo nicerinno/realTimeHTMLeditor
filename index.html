@@ -9,20 +9,37 @@
 </head>
 <body onload="ready()">
 
-
-<div id='container'>
 <nav class="topnav" style="color: white"> Chose your font color: 
-	<li><button type="button" onClick="yellow()">Yellow <button type="button" onClick="white()">White</li>
+	<li class="regular"><button type="button" onClick="yellow()">Yellow <button type="button" onClick="white()">White</li>
 
-	<li>Or use hexa/HTML color: <input type="text" name="color" id="userColor"> <button onClick="chooser()">Change</li>
+	<li class="regular">Or use hexa/HTML color: <input type="text" name="color" id="userColor"> <button onClick="chooser()">Change</li>
+
 </nav>
 
-  <div id="editor">
-	<p><!DOCTYPE html><html><head></head><body></body></html></p>
-  </div>
+<div id="container1">
 
-  <iframe id='iframe' frameBorder="0">
+	<div  id="editor">
+
+	</div>
+<br>
+	<div  id="cssEditor">
+		
+	</div>
+
+  
+
+  </div>
+<div id="container2">
+ 
+  <iframe id='viewer' frameBorder="0">
   </iframe>
+
+</div>
+
+<div id="container3">
+	<div  id="scriptEditor">
+		
+	</div>
 </div>
 
 <script src="script/script.js">	</script>
