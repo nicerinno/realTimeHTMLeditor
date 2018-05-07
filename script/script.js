@@ -44,7 +44,7 @@ function setupEditor()
 </html>`;
 
   window.editor = ace.edit("editor");
-  editor.setTheme("ace/theme/dracula");
+  editor.setTheme("ace/theme/terminal");
   editor.getSession().setMode("ace/mode/html");
   editor.setValue(text,1); 
 
@@ -69,7 +69,7 @@ function setupEditor()
   	let textS = `<script>
 </script>`;
 	window.scriptEditor = ace.edit("scriptEditor");
-	scriptEditor.setTheme("ace/theme/dracula");
+	scriptEditor.setTheme("ace/theme/terminal");
 	scriptEditor.getSession().setMode("ace/mode/javascript");
 	scriptEditor.setValue(textS,1); 
 	scriptEditor.getSession().on('change', function() {
