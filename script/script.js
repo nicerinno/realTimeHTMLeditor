@@ -56,7 +56,7 @@ function setupEditor()
   
   
   editor.setOptions({
-    fontSize: "14pt",
+    fontSize: "12pt",
     showLineNumbers: true,
     showGutter: true,
     vScrollBarAlwaysVisible:false,
@@ -64,41 +64,14 @@ function setupEditor()
   });
   editor.setShowPrintMargin(false);
   editor.setBehavioursEnabled(true);
-}
-
-function setupCSSEditor()
-{
-	let text = `<style>
-</style>`;
-	window.cssEditor = ace.edit("cssEditor");
-	cssEditor.setTheme("ace/theme/dracula");
-	cssEditor.getSession().setMode("ace/mode/css");
-	cssEditor.setValue(text,1); 
-	cssEditor.getSession().on('change', function() {
-    update();
-  });
-
   
-  cssEditor.setOptions({
-    fontSize: "14pt",
-    showLineNumbers: true,
-    showGutter: true,
-    vScrollBarAlwaysVisible:false,
-    enableBasicAutocompletion: false, enableLiveAutocompletion: false
-  });
-
-  cssEditor.setShowPrintMargin(false);
-  cssEditor.setBehavioursEnabled(true);
-}
-
-function setupScriptEditor()
-{
-	let text = `<script>
+  
+  	let textS = `<script>
 </script>`;
 	window.scriptEditor = ace.edit("scriptEditor");
 	scriptEditor.setTheme("ace/theme/dracula");
 	scriptEditor.getSession().setMode("ace/mode/javascript");
-	scriptEditor.setValue(text,1); 
+	scriptEditor.setValue(textS,1); 
 	scriptEditor.getSession().on('change', function() {
     update();
   });
@@ -106,7 +79,7 @@ function setupScriptEditor()
 
   
   scriptEditor.setOptions({
-    fontSize: "14pt",
+    fontSize: "12pt",
     showLineNumbers: true,
     showGutter: true,
     vScrollBarAlwaysVisible:false,
@@ -115,12 +88,31 @@ function setupScriptEditor()
 
   scriptEditor.setShowPrintMargin(false);
   scriptEditor.setBehavioursEnabled(true);
+  
+  	let textC = `<style>
+</style>`;
+	window.cssEditor = ace.edit("cssEditor");
+	cssEditor.setTheme("ace/theme/dracula");
+	cssEditor.getSession().setMode("ace/mode/css");
+	cssEditor.setValue(textC,1); 
+	cssEditor.getSession().on('change', function() {
+    update();
+  });
+
+  
+  cssEditor.setOptions({
+    fontSize: "12pt",
+    showLineNumbers: true,
+    showGutter: true,
+    vScrollBarAlwaysVisible:false,
+    enableBasicAutocompletion: false, enableLiveAutocompletion: false
+  });
+
+  cssEditor.setShowPrintMargin(false);
+  cssEditor.setBehavioursEnabled(true);
+  
 }
 
-function ready()
-{
-setupScriptEditor();
-setupCSSEditor();
+
 setupEditor();
 update();
-}
