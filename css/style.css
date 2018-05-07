@@ -1,4 +1,4 @@
-html,body { margin:0; padding:0; height:100%; width:100%; overflow:auto; background-color:black;}
+html,body { margin:0; padding:0; height:100%; width:100%; overflow:visible; background-color:black;}
 
 nav.topnav
 {
@@ -46,6 +46,7 @@ nav ul
 }
 
 #cssEditor {
+	float:left;
     background-color: #45494f;
 	width: 97%;
 	height: 47%;
@@ -58,6 +59,7 @@ nav ul
     display:inline-block;
 }
 #scriptEditor {
+	float:left;
     background-color: #45494f;
 	width: 97%;
 	height: 47%;
@@ -67,48 +69,46 @@ nav ul
 	padding: 5px;
 	color: #f4df24;
 	border: 1px solid black;
-
+	overflow : hidden;
+	display:inline-block;
 }
 
 #container1{
 	float:left;
-	height:97%;
-	width:50%;
+	height:89%;
+	width:48%;
 	white-space : nowrap; 
 	overflow : auto;
-	position:absolute;
+	position:relative;
+	display:inline-block;
 }
 
 #container2 {
+
 	margin-left: 3%;
 	margin-top:0.3%;
 	float:right;
-	height:95%;
-	width:95%;
-	overflow : hidden;
+	height:87%;
+	width:48%;
+	white-space : nowrap;
+	overflow : auto;
 	position:absolute;
-}
-
-#container3 {
-	margin-top:49.5%;
-	float:right;
-	height:75%;
-	width:100%;
-	position:absolute;
+	display:inline-block;
 }
 
 #viewer {
-	float:right;
+
 	background-color: white;
 	border: none;
-	width: 50%;
-	height: 100%;
+	width: 97%;
+	height: 97%;
 	margin-left: 5px;
 	margin-top: 5px;
 	margin-right: 5px;
 	border: 1px solid;
 	color: white;
 	display:inline-block;
+	overflow:hidden;
 }
 
 
