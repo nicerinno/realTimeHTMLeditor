@@ -29,11 +29,8 @@ function update()
 {
 	var idoc = document.getElementById('viewer').contentWindow.document;
 	idoc.open();
-	idoc.write(editor.getValue() + cssEditor.getValue() + scriptEditor.getValue());
+	idoc.write(cssEditor.getValue() + scriptEditor.getValue() + editor.getValue());
 	idoc.close();
-	
-
-	
 }
 
 function setupEditor()
@@ -47,7 +44,7 @@ function setupEditor()
 </html>`;
 
   window.editor = ace.edit("editor");
-  editor.setTheme("ace/theme/monokai");
+  editor.setTheme("ace/theme/dracula");
   editor.getSession().setMode("ace/mode/html");
   editor.setValue(text,1); 
 
@@ -65,9 +62,8 @@ function setupEditor()
     vScrollBarAlwaysVisible:false,
     enableBasicAutocompletion: false, enableLiveAutocompletion: false
   });
-
   editor.setShowPrintMargin(false);
-  editor.setBehavioursEnabled(false);
+  editor.setBehavioursEnabled(true);
 }
 
 function setupCSSEditor()
@@ -75,14 +71,13 @@ function setupCSSEditor()
 	let text = `<style>
 </style>`;
 	window.cssEditor = ace.edit("cssEditor");
-	cssEditor.setTheme("ace/theme/monokai");
+	cssEditor.setTheme("ace/theme/dracula");
 	cssEditor.getSession().setMode("ace/mode/css");
-	cssEditor.setValue(text,2); 
+	cssEditor.setValue(text,1); 
 	cssEditor.getSession().on('change', function() {
     update();
   });
 
-  
   
   cssEditor.setOptions({
     fontSize: "14pt",
@@ -93,7 +88,7 @@ function setupCSSEditor()
   });
 
   cssEditor.setShowPrintMargin(false);
-  cssEditor.setBehavioursEnabled(false);
+  cssEditor.setBehavioursEnabled(true);
 }
 
 function setupScriptEditor()
@@ -101,14 +96,14 @@ function setupScriptEditor()
 	let text = `<script>
 </script>`;
 	window.scriptEditor = ace.edit("scriptEditor");
-	scriptEditor.setTheme("ace/theme/monokai");
-	scriptEditor.getSession().setMode("ace/mode/script");
-	scriptEditor.setValue(text,2); 
+	scriptEditor.setTheme("ace/theme/dracula");
+	scriptEditor.getSession().setMode("ace/mode/javascript");
+	scriptEditor.setValue(text,1); 
 	scriptEditor.getSession().on('change', function() {
     update();
   });
 
-  
+
   
   scriptEditor.setOptions({
     fontSize: "14pt",
@@ -119,13 +114,13 @@ function setupScriptEditor()
   });
 
   scriptEditor.setShowPrintMargin(false);
-  scriptEditor.setBehavioursEnabled(false);
+  scriptEditor.setBehavioursEnabled(true);
 }
 
 function ready()
 {
-setupEditor();
-setupCSSEditor();
 setupScriptEditor();
+setupCSSEditor();
+setupEditor();
 update();
 }
